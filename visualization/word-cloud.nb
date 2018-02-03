@@ -1,0 +1,1791 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73699,       1783]
+NotebookOptionsPosition[     72880,       1763]
+NotebookOutlinePosition[     73228,       1778]
+CellTagsIndexPosition[     73185,       1775]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"poems", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<C:\\\\Users\\\\Stephen\\\\Desktop\\\\word-cloud\\\\fetch\\\\poems.\
+txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fiction", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<C:\\\\Users\\\\Stephen\\\\Desktop\\\\word-cloud\\\\fetch\\\\fiction.\
+txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"combined", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<C:\\\\Users\\\\Stephen\\\\Desktop\\\\word-cloud\\\\fetch\\\\combined.\
+txt\>\"", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.726675304738447*^9, 3.7266754629279766`*^9}, {
+  3.7266755322966533`*^9, 3.7266755500704613`*^9}},
+ NumberMarks->False,ExpressionUUID->"75768437-fa70-4083-8af7-9e90ebeed44b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"DeleteStopwords", "[", "fiction", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"DeleteStopwords", "[", "poems", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"DeleteStopwords", "[", "combined", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7266754738259463`*^9, 3.726675506409567*^9}, {
+  3.726675554221529*^9, 
+  3.726675595794433*^9}},ExpressionUUID->"b6240c5c-b425-4503-b0ad-\
+1beab16bf894"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.26119402985074625`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"just\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1800778715120052],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {0., -45.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"time\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.16385463984425697`],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {0., 44.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Miguel\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08922777417261518],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {15., 68.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"know\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11194029850746269`],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {9., -77.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Little\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11518494484101233`],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {-68., -32.}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"said\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1281635301752109],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {73., 26.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"thought\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06651524983776767],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {72., -33.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"god\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.09571706683971447],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {-73., 0.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"wanted\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07949383517196626],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {-78., 36.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"say\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.09571706683971447],
+     FontColor->RGBColor[1, 0.75, 0]], {72., -5.}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"think\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08922777417261518],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {-48., 71.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"que\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08922777417261518],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {-57., -51.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"eyes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07624918883841661],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-73., 20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"long\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07624918883841661],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {60., -50.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"things\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06327060350421804],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-67., 52.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"got\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0827384815055159],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {59., 49.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"years\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060025957170668394`],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {0., 89.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"remember\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {0., -96.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"away\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06327060350421804],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-46., -79.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"room\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06975989617131732],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {69., -68.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"face\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07624918883841661],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {41., 88.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"right\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06327060350421804],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {68., 69.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"good\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {-38., 92.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"New\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06975989617131732],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {0., 101.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"maybe\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {64., -83.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Casey\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {95., 46.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"looked\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {-53., -96.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"home\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060025957170668394`],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {52., -97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"thing\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {-84., -64.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"way\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {94., -49.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"De\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0827384815055159],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {45., 102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hands\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {-40., 106.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"night\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {-91., 69.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"says\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {-82., -78.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"knew\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060025957170668394`],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {81., 84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"really\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {-73., 90.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"told\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06651524983776767],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {77., 99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"turned\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {-81., 102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"school\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {94., -93.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"getting\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {-93., -92.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"old\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07300454250486697],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {105., -13.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"day\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {-108., 6.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"look\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06327060350421804],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {0., -111.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"people\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.8949268664259606, 0.5032845776173072, 0.05843417978336459]], {-97., -49.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"went\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {11., 112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"man\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060025957170668394`],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-32., -108.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Lawrence\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {16., 20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"floor\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {33., -110.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"car\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06651524983776767],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {108., 4.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"house\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {105., 58.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"make\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {-107., 47.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"come\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {104., 70.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"head\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05353666450356911],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {46., 118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"forget\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {-39., 118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"past\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {-110., -10.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"work\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05353666450356911],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {108., -64.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"World\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {-66., -109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"saw\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {64., -109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"great\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {-110., 19.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"used\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {-104., 81.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Josh\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {104., -78.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"glass\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], {-76., 113.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"want\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {79., 113.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Misty\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {-111., -74.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"door\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {107., 94.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mound\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {65., -119.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"asked\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {95., -106.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Emma\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {-42., -120.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"high\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {-111., -24.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"kept\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {113., 16.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"love\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {-112., -37.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hair\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {-96., -107.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"bed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {-113., -61.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"didnt\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {107., 105.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mean\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {-9., -28.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"heard\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {-74., -120.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"friend\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {98., -117.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"wine\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {-108., 89.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hand\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {-102., 112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hell\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {106., 116.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"life\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05678131083711875],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {113., 28.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"son\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {64., -20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"trees\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.9107287510704583, 0.33890687339431275`, 0.20182187767614543`]], {-102., -117.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"left\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.050292018170019465`],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {113., -29.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"El\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060025957170668394`],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {116., -44.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"later\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {0., 121.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"lake\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {0., -124.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"kind\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {27., -123.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"took\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[0.6672593867853922, 0.7205288207539324, 0.]], {-123., 27.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Lexi\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {14., 129.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"call\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {-50., -66.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"en\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {-115., 56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mi\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043802725502920185`],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {-19., -129.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"s\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06651524983776767],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {124., -8.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sun\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03731343283582089],
+     FontColor->RGBColor[
+      0.6453361616656581, 0.37647057236169945`, 0.6741595958358548]], {61., 6.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"y\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {-126., 1.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"let\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {122., 40.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Id\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04055807916937054],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {128., 2.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"t\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04704737183646982],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {-16., 116.},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-134.5, 133.5}, {-135.5, 134.5}}]], "Output",
+ CellChangeTimes->{{3.7266754868886724`*^9, 3.7266755097965703`*^9}, {
+  3.7266755753095546`*^9, 
+  3.726675599676753*^9}},ExpressionUUID->"8143cde4-70c2-4cf1-8720-\
+d55b0c09caa1"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.2834008097165992],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"time\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1305810571933626],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {22.5, 27.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"know\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11233392256372242`],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {-0.5, -36.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"years\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07698009921879455],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-0.5, 48.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"away\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07127786964703199],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {-0.5, -53.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"way\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08724411244796716],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {-45.5, 41.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"Just\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10206990933454982`],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-0.5, 62.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"remember\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05987341050350688],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-7.5, -69.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"night\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07355876147573702],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {53.5, -32.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"love\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.09294634201972972],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {46.5, 43.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"people\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.058732964589154356`],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {-56.5, -31.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"day\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08040143696185208],
+     FontColor->RGBColor[1, 0.75, 0]], {40.5, -53.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"said\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08724411244796716],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {-70.5, 0.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"good\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06557564007526942],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {-52.5, -46.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mother\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0632947482465644],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {-51.5, 54.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"things\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05189028910303929],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {70.5, 6.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"eyes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06671608598962195],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {-68.5, -13.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"water\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07013742373267948],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {-71.5, 17.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"long\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07013742373267948],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {69.5, -8.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"place\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {70.5, 21.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"thought\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {45.5, 58.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"morning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {-37.5, 67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sometimes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {-0.5, 77.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hands\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05987341050350688],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-0.5, -83.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"come\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07013742373267948],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {48.5, 70.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"black\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06557564007526942],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {48.5, -73.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"white\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06443519416091692],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {-0.5, 89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"light\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05987341050350688],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-79.5, 32.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"little\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0724183155613845],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {-60.5, -65.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"make\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.061013856417859384`],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {78.5, -44.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"maybe\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {-44.5, 77.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"inside\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05759251867480185],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {-42.5, -83.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"room\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0621543023322119],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {87.5, 31.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"think\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.061013856417859384`],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {42.5, 82.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"home\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05759251867480185],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {39.5, -86.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"man\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06899697781832696],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {74.5, -56.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"say\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05759251867480185],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {87.5, -23.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"house\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04732850544562924],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {-0.5, -96.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"you\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {80.5, 44.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"eye\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {-91.5, -25.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sky\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05531162684609683],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {-32.5, 89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"moment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.6453361616656581, 0.37647057236169945`, 0.6741595958358548]], {-0.5, 101.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"right\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04846895135998175],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {79.5, 55.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"wanted\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {-78.5, 63.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sleep\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {-86.5, -45.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"children\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04048582995951417],
+     FontColor->RGBColor[0.6672593867853922, 0.7205288207539324, 0.]], {-39.5, -95.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"heart\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {37.5, 95.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"silence\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {-62.5, 85.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"says\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {-90.5, 46.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"song\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {32.5, -97.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"open\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {-75.5, 73.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"head\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05189028910303929],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {85.5, 67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"need\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0530307350173918],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {84.5, -67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"left\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07013742373267948],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {-91.5, -59.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"words\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {-38.5, 100.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"life\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07013742373267948],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {72.5, 82.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hand\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04960939727433427],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {-77.5, -79.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"kitchen\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {76.5, -86.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"dont\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {67.5, 96.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"dark\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05417118093174431],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {-70.5, 96.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hair\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05531162684609683],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {-76.5, -92.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"stop\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {64.5, -97.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"old\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06671608598962195],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {93.5, 92.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"clouds\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04048582995951417],
+     FontColor->RGBColor[
+      0.9107287510704583, 0.33890687339431275`, 0.20182187767614543`]], {-0.5, -107.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"leaves\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {-1.5, 109.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"better\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {-33.5, -106.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tree\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05074984318868678],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {-98.5, -12.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"look\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05189028910303929],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {99.5, -7.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"world\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {36.5, 106.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"found\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {36.5, -109.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tell\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.056452072760449334`],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {99.5, 13.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"new\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04846895135998175],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {-45.5, 109.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"want\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {-64.5, -106.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"blue\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04732850544562924],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {-94.5, 82.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"five\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05531162684609683],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {64.5, 108.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Green\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {67.5, -108.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"small\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {99.5, 78.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"voice\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {-72.5, 107.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"girl\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04732850544562924],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {-102.5, 0.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cold\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04732850544562924],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {89.5, -97.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"feel\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04960939727433427],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {-96.5, 94.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"got\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], 
+    {-103.5, 13.5}, Center, Automatic], InsetBox[
+    StyleBox["\<\"dead\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {-91.5, -105.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"floor\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {-103.5, -89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"door\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {89.5, 106.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"knew\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {96.5, -108.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"saw\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {-99.5, 105.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"face\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {-106.5, 23.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"me\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05189028910303929],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {-104.5, 34.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"let\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05759251867480185],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {102.5, 41.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"red\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04846895135998175],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {110.5, -18.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"skin\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {107.5, -35.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"lost\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043907167702571706`],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {24.5, 114.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"told\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {-113.5, -25.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"men\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.8949268664259606, 0.5032845776173072, 0.05843417978336459]], {-108.5, -35.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"God\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {-0.5, 117.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sun\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04618805953127673],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {-0.5, -116.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"bed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04162627587386668],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {104.5, 53.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"fire\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04276672178821919],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {107.5, -47.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"air\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04504761361692422],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {113.5, 24.5},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-125., 122.}, {-123., 123.}}]], "Output",
+ CellChangeTimes->{{3.7266754868886724`*^9, 3.7266755097965703`*^9}, {
+  3.7266755753095546`*^9, 
+  3.7266756038398185`*^9}},ExpressionUUID->"1c2a2472-2a3b-4b3e-a8a1-\
+a1a931593f51"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.28455284552845533`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"time\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1437077751059201],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {24., 28.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"know\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1162258101454254],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {0., -37.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Just\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.1265315470056109],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {0., 54.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"years\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07586167410969885],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {0., -54.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"away\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07242642848963701],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {-56., -30.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"remember\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06040306881942059],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-45., 35.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"way\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08273216534982253],
+     FontColor->RGBColor[1, 0.75, 0]], {55., -31.}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"said\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10162601626016261`],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {54., 45.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"eyes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07242642848963701],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {4., -68.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"thought\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05267376617428147],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {-53., 48.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"long\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07500286270468338],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {-68., 0.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"people\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0561090117943433],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {47., -54.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"day\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07757929691972977],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-41., -54.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"good\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0664147486545288],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {72., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"love\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08444978815985343],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {-72., 16.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"things\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05782663460437422],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {0., 73.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"night\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06984999427459064],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {-40., 64.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"little\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08702622237489982],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {77., 15.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"wanted\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05782663460437422],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {75., -16.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"mother\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05868544600938968],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {-75., -17.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"think\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07156761708462156],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {50., 63.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hands\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06212069162945151],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {-38., -74.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"come\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06813237146455974],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {46., -69.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"right\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05525020038932784],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {16., -84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"say\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07070880567960611],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {-69., -43.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"water\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06126188022443606],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {16., 84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"home\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06126188022443606],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-41., 79.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"room\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06727356005954427],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {-20., -86.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"white\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05954425741440514],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-22., 90.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"make\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06126188022443606],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {53., 78.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"place\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04837970914920418],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {-74., -57.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"maybe\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {49., -82.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"light\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05353257757929693],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {88., -30.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"black\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0561090117943433],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {14., 97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"man\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06984999427459064],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {-77., 61.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"says\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04752089774418871],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {85., -44.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"house\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04923852055421963],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {0., -99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"head\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05525020038932784],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {-56., -88.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"moment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {78., 29.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"inside\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {-78., -69.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"really\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {34., -95.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"got\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0561090117943433],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {-92., 31.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"old\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.07156761708462156],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {92., 42.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"knew\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04923852055421963],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {86., -56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"look\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05782663460437422],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-75., 72.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"left\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06813237146455974],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {49., 92.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"new\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05696782319935876],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {84., 61.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"face\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05696782319935876],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {82., -69.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"God\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05868544600938968],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-57., 92.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"words\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.044085652124126885`],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {-36., -99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"want\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04837970914920418],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {88., 71.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"life\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06984999427459064],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {78., -84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"thing\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {-92., -29.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"open\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {-90., 44.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"need\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04923852055421963],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {64., -97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hand\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {77., 88.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hair\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05696782319935876],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {-86., 84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"floor\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04923852055421963],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {-88., -81.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"better\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {77., 99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"door\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {-69., -99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"found\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {-87., 95.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"world\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04666208633917326],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {-19., 102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"told\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05439138898431239],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {-99., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"dont\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04923852055421963],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {-98., -42.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"saw\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {0., -109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"dark\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {10., 109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"past\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {102., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"went\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {28., -109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"heart\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {-30., 110.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"eye\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {-103., 12.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"stop\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.042368029314095966`],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {40., 106.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sky\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04494446352914234],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {-101., -54.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"used\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {-57., 104.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"didnt\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {-27., -110.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"girl\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.044085652124126885`],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {106., 10.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"voice\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {57., -108.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"small\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {-55., -110.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"you\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.6453361616656581, 0.37647057236169945`, 0.6741595958358548]], {-104., 52.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"trees\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {64., 109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"dead\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {93., -96.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"let\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0561090117943433],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {-103., 61.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tree\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {102., -82.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"blue\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.044085652124126885`],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {104., 82.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cold\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04494446352914234],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {-95., -93.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"feel\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {-82., 105.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"later\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04065040650406505],
+     FontColor->RGBColor[
+      0.9107287510704583, 0.33890687339431275`, 0.20182187767614543`]], {-81., -110.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"walk\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.8949268664259606, 0.5032845776173072, 0.05843417978336459]], {84., -106.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tell\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05009733195923509],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {104., 93.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"lost\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04322684071911142],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {87., 109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"took\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {110., -10.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"bed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {-109., -13.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sun\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04666208633917326],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {110., -19.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"five\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04666208633917326],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {111., 20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"red\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04580327493415779],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {-113., 20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"skin\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {111., -30.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"me\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.042368029314095966`],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {42., -43.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"car\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.042368029314095966`],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {108., -40.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"air\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04065040650406505],
+     FontColor->RGBColor[0.6672593867853922, 0.7205288207539324, 0.]], {111., 30.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Im\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0415092179090805],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], {-111., 30.},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-123.5, 122.5}, {-115.5, 115.5}}]], "Output",
+ CellChangeTimes->{{3.7266754868886724`*^9, 3.7266755097965703`*^9}, 
+   3.7266755753095546`*^9, 
+   3.7266756088220654`*^9},ExpressionUUID->"6f6c5205-1592-4e99-bce9-\
+4b48464d1e74"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7266753425566807`*^9, 
+  3.7266753439222603`*^9}},ExpressionUUID->"bedefcda-7af5-4a57-b7f1-\
+f647145a4cd3"]
+},
+WindowSize->{759, 793},
+WindowMargins->{{466, Automatic}, {24, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 817, 21, 67, "Input",ExpressionUUID->"75768437-fa70-4083-8af7-9e90ebeed44b"],
+Cell[CellGroupData[{
+Cell[1400, 45, 516, 12, 67, "Input",ExpressionUUID->"b6240c5c-b425-4503-b0ad-1beab16bf894"],
+Cell[1919, 59, 23561, 564, 380, "Output",ExpressionUUID->"8143cde4-70c2-4cf1-8720-d55b0c09caa1"],
+Cell[25483, 625, 23731, 564, 376, "Output",ExpressionUUID->"1c2a2472-2a3b-4b3e-a8a1-a1a931593f51"],
+Cell[49217, 1191, 23488, 564, 355, "Output",ExpressionUUID->"6f6c5205-1592-4e99-bce9-4b48464d1e74"]
+}, Open  ]],
+Cell[72720, 1758, 156, 3, 28, "Input",ExpressionUUID->"bedefcda-7af5-4a57-b7f1-f647145a4cd3"]
+}
+]
+*)
+
